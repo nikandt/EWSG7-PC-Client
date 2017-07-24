@@ -6,8 +6,11 @@ import serial
 import time
 
 
-ser = serial.Serial('COM3', 9600, timeout=0)
-
+#ser = serial.Serial('COM3', 9600, timeout=0)
+class FakeSerial(object):
+    def write(self, data):
+        pass
+ser = FakeSerial()
 
 class Ui_Form(QtWidgets.QMainWindow):
 
@@ -64,21 +67,21 @@ class Ui_Form(QtWidgets.QMainWindow):
         self.testButton4.setGeometry(QtCore.QRect(470, 20, 110, 50))
 
         self.pushButton1 = QtWidgets.QPushButton(Form)
-        self.pushButton1.setGeometry(QtCore.QRect(20,250,50,50))
+        self.pushButton1.setGeometry(QtCore.QRect(12,250,66,50))
         self.pushButton2 = QtWidgets.QPushButton(Form)
-        self.pushButton2.setGeometry(QtCore.QRect(80,250,50,50))
+        self.pushButton2.setGeometry(QtCore.QRect(72,250,66,50))
         self.pushButton3 = QtWidgets.QPushButton(Form)
-        self.pushButton3.setGeometry(QtCore.QRect(170,250,50,50))
+        self.pushButton3.setGeometry(QtCore.QRect(162,250,66,50))
         self.pushButton4 = QtWidgets.QPushButton(Form)
-        self.pushButton4.setGeometry(QtCore.QRect(230,250,50,50))
+        self.pushButton4.setGeometry(QtCore.QRect(222,250,66,50))
         self.pushButton5 = QtWidgets.QPushButton(Form)
-        self.pushButton5.setGeometry(QtCore.QRect(320,250,50,50))
+        self.pushButton5.setGeometry(QtCore.QRect(312,250,66,50))
         self.pushButton6 = QtWidgets.QPushButton(Form)
-        self.pushButton6.setGeometry(QtCore.QRect(380,250,50,50))
+        self.pushButton6.setGeometry(QtCore.QRect(372,250,66,50))
         self.pushButton7 = QtWidgets.QPushButton(Form)
-        self.pushButton7.setGeometry(QtCore.QRect(470,250,50,50))
+        self.pushButton7.setGeometry(QtCore.QRect(462,250,66,50))
         self.pushButton8 = QtWidgets.QPushButton(Form)
-        self.pushButton8.setGeometry(QtCore.QRect(530,250,50,50))
+        self.pushButton8.setGeometry(QtCore.QRect(522,250,66,50))
         #170, 40, 75, 23
         self.powerAllOnButton.setObjectName("Power On")
         self.powerAllOffButton.setObjectName("Power Off")
@@ -510,6 +513,7 @@ class Ui_Form(QtWidgets.QMainWindow):
             self.clicks8 = 0
 
 def scan():
+    assert False
     ser.write(b'2')
     time.sleep(0.1)
     number = ser.readline()

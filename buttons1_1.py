@@ -15,25 +15,28 @@ class ui_buttons(QtWidgets.QMainWindow):
 		Form.resize(50,20)
 
 		self.scanButton = QtWidgets.QPushButton(Form)
-		self.scanButton.setGeometry(QtCore.QRect(0,0,75,20))
+		self.scanButton.setGeometry(QtCore.QRect(0,0,95,20))
 		self.scanButton.setObjectName("Scan")
 
 		self.powerAllOnButton = QtWidgets.QPushButton(Form)
-		self.powerAllOnButton.setGeometry(QtCore.QRect(0,40, 75,20))
+		self.powerAllOnButton.setGeometry(QtCore.QRect(0,40, 95,20))
 		self.powerAllOnButton.setObjectName("Power All On")
 
 		self.powerAllOffButton = QtWidgets.QPushButton(Form)
-		self.powerAllOffButton.setGeometry(QtCore.QRect(0,60, 75,20))
+		self.powerAllOffButton.setGeometry(QtCore.QRect(0,60, 95,20))
 		self.powerAllOffButton.setObjectName("Power All Off")
 
 		self.lineAllOnButton = QtWidgets.QPushButton(Form)
-		self.lineAllOnButton.setGeometry(QtCore.QRect(0,100, 75,20))
+		self.lineAllOnButton.setGeometry(QtCore.QRect(0,100, 95,20))
 		self.lineAllOnButton.setObjectName("Line All On")
 
 		self.lineAllOffButton = QtWidgets.QPushButton(Form)
-		self.lineAllOffButton.setGeometry(QtCore.QRect(0,120, 75,20))
+		self.lineAllOffButton.setGeometry(QtCore.QRect(0,120, 95,20))
 		self.lineAllOffButton.setObjectName("Line All Off")
 
+		self.flashButton = QtWidgets.QPushButton(Form)
+		self.flashButton.setGeometry(QtCore.QRect(0,160, 95,20))
+		self.flashButton.setObjectName("Flash")
 
 
 		self.retranslateUi(Form)
@@ -46,3 +49,4 @@ class ui_buttons(QtWidgets.QMainWindow):
 		self.powerAllOffButton.setText(_translate("Form", "Power All Off"))
 		self.lineAllOnButton.setText(_translate("Form", "Line All On"))
 		self.lineAllOffButton.setText(_translate("Form", "Line All Off"))
+		self.flashButton.setText(_translate("Form", "Flash..."))

@@ -13,7 +13,7 @@ class Grid_Ui(QDialog):
         self.title = 'Switcher'
         self.left = 100
         self.top = 100
-        self.width = 320
+        self.width = 600
         self.height = 100
         self.var = 0
         self.initUI()
@@ -41,7 +41,7 @@ class Grid_Ui(QDialog):
         #scaled_module = module.resize(300,150)
         layout.setColumnStretch(0, 2)
         layout.setColumnStretch(1, 10)
-        layout.setColumnStretch(2, 10)
+        #layout.setColumnStretch(2, 10)
         #layout.setColumnStretch(0,2)
         
         #buttons.scanButton.clicked.connect(self.scan_module)
@@ -49,9 +49,9 @@ class Grid_Ui(QDialog):
         layout.addWidget(buttons,0,0)
 
         layout.addWidget(module_1,0,1)
-        layout.addWidget(module_2,0,2)
+        #layout.addWidget(module_2,0,2)
         layout.addWidget(module_3,1,1)
-        layout.addWidget(module_4,1,2) 
+        #layout.addWidget(module_4,1,2) 
  
         self.horizontalGroupBox.setLayout(layout)
 
